@@ -89,7 +89,9 @@ curl -fsSLO https://www.locrdp.cn/turn/locrdp-selfhost-eturnal-setup.sh \
   && sudo bash locrdp-selfhost-eturnal-setup.sh
 ```
 
-脚本会交互式询问 locrdp 账号或手机号以及密码。账号验证完成后，脚本会安装并启动 eturnal，然后把当前服务器注册到该账号的自建中继列表。
+脚本启动后会显示菜单，选择“安装/更新”即可继续。安装流程会交互式询问 locrdp 账号或手机号以及密码；账号验证完成后，脚本会安装并启动 eturnal，然后把当前服务器注册到该账号的自建中继列表。
+
+需要移除本机服务和会员中心节点时，可重新运行脚本选择“卸载”，或直接执行 `sudo bash locrdp-selfhost-eturnal-setup.sh uninstall`。卸载会要求输入 locrdp 账号密码，先删除会员中心的对应节点，再停止并删除本机 eturnal 服务、配置和安装文件；此前写入的防火墙规则不会自动删除。
 
 ### 系统要求
 
